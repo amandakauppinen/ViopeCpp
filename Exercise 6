@@ -1,0 +1,38 @@
+**Prompt**
+
+Write a program that asks user for two integers and prints the sum, difference, product and remainder of the two numbers.
+
+Esibrand tulostus
+
+Input first integer: 3
+
+Input second integer: 5
+
+3+5 = 8
+
+3-5 = -2
+
+3*5 = 15
+
+Remainder: 3
+
+**Solution**
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int firstNumber;
+	int secondNumber;
+	
+	cout << "Input first integer:";
+	cin >> firstNumber;
+	cout << "Input second integer:";
+	cin >> secondNumber;
+	
+	cout << "" << firstNumber << "+" << secondNumber << " = " << firstNumber + secondNumber << endl;
+	cout << "" << firstNumber << "-" << secondNumber << " = " << firstNumber - secondNumber << endl;
+	cout << "" << firstNumber << "*" << secondNumber << " = " << firstNumber * secondNumber << endl;
+	cout << "Remainder: " << firstNumber % secondNumber << endl;
+}
