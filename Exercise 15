@@ -1,0 +1,47 @@
+**Prompt**
+
+Write a program that calculates the amount of work hours in a given time frame and prints the total amount of hours, the average work day length and inputted hours separated by spaces. The program first asks how many days will be inputted (max. 30 days). After this the program proceeds to ask the daily work hours.
+
+Tip:
+
+Use an array with 30 elements to ease the making of the program.
+
+**Solution**
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int days;
+	float hours[30];
+	int index;
+	float sum;
+	
+	cout << "The program calculates the total amount of" << endl;
+	cout << "work hours during a given time frame and the average work day length." << endl;
+	
+	cout << "How many days:" << endl;
+	cin >> days;
+	
+	for(index = 1; index <= days; index++) {
+		cout << "Input hours of workday " << index << ": ";
+		cin >> hours[index];
+		cin.ignore();
+		sum += hours[index];
+	}
+	
+	
+	float average = (float)sum / (float)days;
+	
+	cout << "Total work hours: " << sum << endl;
+	cout << "Average work day length: " << average << endl;
+	cout.precision(4);
+	cout << "Inputted hours: ";
+	
+	for(index = 1; index <= days; index++) {
+		cout << hours[index] << " ";
+	}
+
+	cout << endl;
+
+}
