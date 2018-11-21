@@ -1,0 +1,57 @@
+**Prompt**
+
+Below program asks user for three integers and prints the smallest and largest of those three on screen.
+Your task is to write the missing functions (largest() and smallest ()), which receive the user input as
+parameters and return the largest and smallest integers, respectively.
+
+**Solution**
+
+//This is the code that can't be modified
+#include <iostream>
+using namespace std;
+
+int largest(int first, int second, int third);
+int smallest(int first, int second, int third);
+
+int main() {
+int number1, number2, number3, largestNumber, smallestNumber;
+cout << "Input the first integer:";
+cin >> number1;
+cout << "Input the second integer:";
+cin >> number2;
+cout << "Input the third integer:";
+cin >> number3;
+largestNumber = largest(number1, number2, number3);
+smallestNumber = smallest(number1, number2, number3);
+cout << "The largest number was " << largestNumber;
+cout << " and smallest " << smallestNumber << "." << endl;
+}
+
+//my code
+int largest(int a, int b, int c) {
+	if(a > b && a > c) {
+		return a;
+	}
+	else if(b > a && b > c) {
+		a = b;
+		return a;
+	}
+	else {
+		a = c;
+		return a;
+	}
+}
+	
+int smallest(int a, int b, int c) {
+	if(a < b && a < c) {
+		return a;
+	}
+	else if(b < a && b < c) {
+		a = b;
+		return a;
+	}
+	else {
+		a = c;
+		return a;	
+	}
+}
