@@ -1,0 +1,87 @@
+**Prompt**
+
+Enhance the previous calculator program so that the user can choose which operation he wants to perform.
+The program first asks for the performed calculation. After this the program asks for the integers, performs
+the calculation and prints the result. Make the choice structure with switch() statement.
+
+Tip:
+
+Calculations are printed ad follows:
+
+Subtraction: x-y=z
+
+Addition: x+y=z
+
+Multiplication: x*y=z
+
+Remainder: x%y=z
+
+Example print
+
+Choose from the following calculations:
+
+1. subtraction
+
+2. addition
+
+3. Multiplication
+
+4. Division
+
+5. Remainder
+
+Choose a calculation: 2
+
+Input first number: 33
+
+Input second number: 12
+
+33+12=45
+
+**Solution**
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int functionNumber;
+	int firstNumber;
+	int secondNumber;
+	
+	cout << "Choose desired calculation:" <<endl;
+	cout << "1: subtraction" << endl;
+	cout << "2: addition" << endl;
+	cout << "3: multiplication" << endl;
+	cout << "4: division" << endl;
+	cout << "5: Remainder" << endl;
+	
+	cout << "Choose a calculation:";
+	cin >> functionNumber;
+	
+	cout << "Input first number:";
+	cin >> firstNumber;
+	
+	cout << "Input second number:";
+	cin >> secondNumber;
+	
+	
+	switch(functionNumber) 
+	{ 
+		case 1:
+			cout << "" << firstNumber << "-" << secondNumber << " = " << firstNumber - secondNumber << endl; 
+			break;
+		case 2:
+			cout << "" << firstNumber << "+" << secondNumber << " = " << firstNumber + secondNumber << endl; 
+			break;
+		case 3:
+			cout << "" << firstNumber << "*" << secondNumber << " = " << firstNumber * secondNumber << endl; 
+			break;
+		case 4:
+			cout << "" << firstNumber << "/" << secondNumber << " = " << firstNumber / secondNumber << endl; 
+			break;
+		case 5:
+			cout << "" << firstNumber << "%" << secondNumber << " = " << firstNumber % secondNumber << endl; 
+			break;
+	}
+}
